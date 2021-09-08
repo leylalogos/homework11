@@ -1,0 +1,9 @@
+{
+    "name": "lililogos/home-work11",
+    "autoload": {
+        "psr-4": {
+            "Lililogos\\HomeWork11\\": "src/"
+        }
+    },
+    "require": {}
+}
