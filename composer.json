@@ -5,5 +5,7 @@
             "Lililogos\\HomeWork11\\": "src/"
         }
     },
-    "require": {}
+    "require": {
+        "pecee/simple-router": "4.3.7.2"
+    }
 }
