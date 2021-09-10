@@ -1,5 +1,6 @@
 <?php
 include_once "./Model/Authentication.php";
+
 class AuthenticationController
 {
 	//show register form to user
@@ -24,6 +25,24 @@ class AuthenticationController
 		}
 		$user = new Authentication();
 		$user->createUser($_POST['username'], $_POST['mobile'], $_POST['email'], $_POST['password']);
-		return '';
+		header("Location: /login");
+
+	}
+
+	public function showLoginForm()
+	{
+		include_once "./View/Login.php";
+
+	}
+
+	public function doLogin()
+	{
+		$login = new Authentication();
+		if ($login->login($_POST['username'], $_POST['password'])) {
+			header("Location: /homepage");
+
+		} else {
+
+		}
 	}
 }

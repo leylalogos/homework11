@@ -15,4 +15,20 @@ class Authentication
 			echo "Error!" . $connection->error;
 		}
 	}
+
+	function login($username, $password) : bool{
+		$connection = ConnectToDatabase();
+		$sql = "SELECT * From useres WHERE username ='$username'  ";
+		$result = mysqli_query($connection,$sql);
+		 if($result->num_rows == 0){
+			 return false;
+		 }
+		 //var_dump();
+		$row = $result->fetch_all()[0];
+		 if( password_verify($password, $row[4])){
+			$_SESSION['user_id'] = $row[0];
+			return true;
+		}
+		return false;
+	}
 }
