@@ -5,7 +5,7 @@
 
 </head>
 <body>
-<div class="container mt-5 ">
+<div class="container mt-5">
 	<div class="row">
 		<div class="col-6 card shadow mb-5 bg-body rounded" >
 			<div class="card-header " style="background:lightyellow" >

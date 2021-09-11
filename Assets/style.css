@@ -1,0 +1,61 @@
+.reForm {
+    width: 500px;
+    height: 600px;
+    background: floralwhite;
+    padding: 33px;
+    display: grid;
+    box-shadow: 5px 5px 5px lightgray;
+    margin-right: 35%;
+    margin-top: 55px;
+    border-radius: 12px;
+}
+
+.btn-reg {
+    background: #198754;
+    height: 44px;
+    border-radius: 8px;
+    color: white;
+}
+.reg-nav{
+    text-align: center;
+}
+.error-reg{
+    text-align: center;
+    color: red;
+}
+/*--------------------------------homestyle----------*/
+
+ .nav-home{
+     width: 100%;
+     background: rebeccapurple;
+     height: 100px;
+ }
+ a{
+     text-decoration: white;
+     color:white;margin: 22px;
+ }
+ .menu-text{
+    direction: rtl;
+     padding-top: 22px;
+     font-weight: bold;
+ }
+/*--------------------dashboard---------*/
+.container{
+    width: 50%;
+    height: 500px;
+    background: floralwhite;
+    margin-right: 25%;
+    margin-top: 55px;
+}
+.nav-pannel{
+    background: gray;
+    height: 66px;
+    text-align: center;
+    padding-top: 19px;
+    border-radius: 9px;
+    color: white;
+    font-weight: bold;
+}
+.php{
+    margin: 23px;
+}

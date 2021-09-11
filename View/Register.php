@@ -1,4 +1,16 @@
-<form action="/register" method="post">
+<html dir="rtl">
+<head>
+	<meta charset="utf-8">
+	<title>آپلود فایل</title>
+	<link rel="stylesheet" href="./Assets/style.css">
+</head>
+<body>
+
+<form class="reForm" action="/register" method="post">
+	<div class="reg-nav">صفحه ثبت نام</div>
+	<div class="error-reg">
+		<?php echo isset($_SESSION['validation_error']) ? $_SESSION['validation_error'] : '' ?>
+	</div>
 	<lable for="username">
 		نام کاربری
 	</lable>
@@ -19,8 +31,9 @@
 		تکرار رمز عبور
 	</lable>
 	<input type="password" name="repeatPassword" id="repeatPassword"><br>
-	<input type="submit" value="ارسال" name="btn_reg">
+	<input  class="btn-reg" type="submit" value="ارسال" name="btn_reg">
 </form>
-<div>
-	<?php echo isset($_SESSION['validation_error'])?$_SESSION['validation_error'] : '' ?>
-</div>
+
+
+</body>
+</html>
