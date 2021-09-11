@@ -2,7 +2,7 @@
 <hrad>
 	<meta charset="utf-8">
 	<title>صفحه اصلی</title>
-	<link rel="stylesheet" href="./Assets/style.css">
+	<link rel="stylesheet" href="../Assets/style.css">
 </hrad>
 <body>
 <header class="nav-home">

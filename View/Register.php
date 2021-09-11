@@ -2,7 +2,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>آپلود فایل</title>
-	<link rel="stylesheet" href="./Assets/style.css">
+	<link rel="stylesheet" href="../Assets/style.css">
 </head>
 <body>
 
