@@ -4,6 +4,7 @@ include "./Controller/UserDashboardController.php";
 include "./Controller/UserManagmentController.php";
 require_once "./Controller/AuthenticationController.php";
 include "./Controller/HomePageController.php";
+include_once "./Controller/UploadController.php";
 SimpleRouter::get("authentication/register/", [AuthenticationController::class, 'register']);
 SimpleRouter::post("authentication/register", [AuthenticationController::class, 'addUser']);
 SimpleRouter::get("authentication/login", [AuthenticationController::class, 'showLoginForm']);
@@ -12,5 +13,8 @@ SimpleRouter::get("userdashboard/showdashboard", [UserDashboardController::class
 SimpleRouter::get("homepage/showhome", [HomePageController::class, 'showHome']);
 SimpleRouter::get("usermanagement/list", [UserManagmentController::class, 'list']);
 SimpleRouter::post("usermanagement/changeStatus", [UserManagmentController::class, 'changeStatus']);
-SimpleRouter::post("usermanagement/changeRole", [UserManagmentController::class, 'changeRole']);
+SimpleRouter::get("upload/showuploadform", [UploadController::class, 'showuploadform']);
+SimpleRouter::post("upload/uploadfileuser", [UploadController::class, 'uploadFileUser']);
+SimpleRouter::get("upload/showUploadGuest", [UploadController::class, 'showuploadguest']);
+SimpleRouter::post("upload/uploadfilguest", [UploadController::class, 'uploadfileguest']);
 

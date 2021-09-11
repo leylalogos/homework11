@@ -7,7 +7,7 @@ class Authentication
 	{
 		$passwordHash = password_hash($password, PASSWORD_DEFAULT);
 		$connection = ConnectToDatabase();
-		$sql = "INSERT INTO useres(username,mobile,email,password,credit,is_active)VALUES ('$username','$mobile','$email','$passwordHash',0,1)";
+		$sql = "INSERT INTO useres(username,mobile,email,password,credit,is_active,role)VALUES ('$username','$mobile','$email','$passwordHash',0,1,'normal')";
 
 		if ($connection->query($sql) === TRUE) {
 			echo "New record created successfully";

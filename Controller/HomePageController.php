@@ -1,7 +1,9 @@
 <?php
 
-class HomePageController{
-	public function showHome(){
+class HomePageController
+{
+	public function showHome()
+	{
 		include "./View/HomePageView.php";
 	}
 }

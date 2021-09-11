@@ -9,8 +9,8 @@
 	<div class="menu-text">
 		<a href="/userdashboard/showdashboard">پنل کاربری</a>
 		<a href="">تنظیمات</a>
-		<a href="">صفحه آپلود فایل توسط کاربر</a>
-		<a href="">صفحه آپلود فایل به صورت مهمان</a>
+		<a href="/upload/showuploadform">صفحه آپلود فایل توسط کاربر</a>
+		<a href="/upload/showUploadGuest">صفحه آپلود فایل به صورت مهمان</a>
 		<a href="/usermanagement/list">پنل مدیریت کاربران</a>
 	</div>
 </header>

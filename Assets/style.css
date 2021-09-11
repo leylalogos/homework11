@@ -42,7 +42,7 @@
 /*--------------------dashboard---------*/
 .container{
     width: 50%;
-    height: 500px;
+    height:auto;
     background: floralwhite;
     margin-right: 25%;
     margin-top: 55px;
@@ -58,4 +58,18 @@
 }
 .php{
     margin: 23px;
+}
+/*----------------------------upload*/
+.file{
+    width: 40%;
+    margin: 99px;
+
+}
+.btna{
+    background: gold;
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 9px;
+    margin-right: 77px;
+    color: currentColor;
 }
