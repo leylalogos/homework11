@@ -12,7 +12,7 @@
 				صفحه ورود
 			</div>
 			<div class="card-body">
-			<form action="/login" method="post">
+			<form action="/authentication/login" method="post">
 				<lable for="username">نام کاربری</lable>
 				<input class="form-control " type="text" name="username" id="username"><br>
 				<lablel for="password">رمز عبور</lablel>

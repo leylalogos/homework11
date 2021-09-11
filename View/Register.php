@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<form class="reForm" action="/register" method="post">
+<form class="reForm" action="/authentication/register" method="post">
 	<div class="reg-nav">صفحه ثبت نام</div>
 	<div class="error-reg">
 		<?php echo isset($_SESSION['validation_error']) ? $_SESSION['validation_error'] : '' ?>

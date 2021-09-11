@@ -21,11 +21,11 @@ class AuthenticationController
 			passwordValidate($_POST['password']);
 		} catch (Exception $exception) {
 			$_SESSION['validation_error'] = $exception->getMessage();
-			header('Location: /register');
+			header('Location: authentication/register');
 		}
 		$user = new Authentication();
 		$user->createUser($_POST['username'], $_POST['mobile'], $_POST['email'], $_POST['password']);
-		header("Location: /login");
+		header("Location: /authentication/login");
 
 	}
 
@@ -39,7 +39,7 @@ class AuthenticationController
 	{
 		$login = new Authentication();
 		if ($login->login($_POST['username'], $_POST['password'])) {
-			header("Location: /homepage");
+			header("Location: /homepage/showhome");
 
 		} else {
 

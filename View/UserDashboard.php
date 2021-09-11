@@ -7,7 +7,9 @@
 <body>
 <div class="container">
 	<div class="content">
-		<div class="nav-pannel">پنل کاربری</div>
+		<div class="nav-pannel">
+			<h3>پنل کاربری</h3>
+		</div>
 		<div class="php">
 			<div>
 				نام کاربری:
