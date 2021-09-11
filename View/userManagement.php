@@ -38,7 +38,7 @@
 								<select class="form-control" name="role" >
 									<option value="admin">ادمین</option>
 									<option value="approval">تایید کننده</option>
-									<option value="normal">تایید کننده</option>
+									<option value="normal"> کاربر معمولی </option>
 								</select>
 								<input class="btn btn-warning" type="submit" value="تغییر">
 

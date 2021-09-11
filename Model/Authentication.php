@@ -16,17 +16,19 @@ class Authentication
 		}
 	}
 
-	function login($username, $password) : bool{
+	function login($username, $password): bool
+	{
 		$connection = ConnectToDatabase();
 		$sql = "SELECT * From useres WHERE username ='$username' and is_active=1";
-		$result = mysqli_query($connection,$sql);
-		 if($result->num_rows == 0){
-			 return false;
-		 }
-		 //var_dump();
-		$row = $result->fetch_all()[0];
-		 if( password_verify($password, $row[4])){
-			$_SESSION['user_id'] = $row[0];
+		$result = mysqli_query($connection, $sql);
+		if ($result->num_rows == 0) {
+			return false;
+		}
+		//var_dump();
+		$row = $result->fetch_assoc();
+		if (password_verify($password, $row['password'])) {
+			$_SESSION['user_id'] = $row['id'];
+			$_SESSION['role'] = $row['role'];
 			return true;
 		}
 		return false;

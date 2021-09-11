@@ -7,7 +7,7 @@ class UserDashboardController
 	public function showDashboard()
 	{
 		if (!isset($_SESSION['user_id'])) {
-			header('Location: authentication/login');
+			header('Location: /authentication/login');
 			return;
 		}
 		$user = new User();

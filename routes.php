@@ -9,10 +9,16 @@ SimpleRouter::get("authentication/register/", [AuthenticationController::class, 
 SimpleRouter::post("authentication/register", [AuthenticationController::class, 'addUser']);
 SimpleRouter::get("authentication/login", [AuthenticationController::class, 'showLoginForm']);
 SimpleRouter::post("authentication/login", [AuthenticationController::class, 'doLogin']);
+SimpleRouter::get("authentication/logout", [AuthenticationController::class, 'logout']);
+
 SimpleRouter::get("userdashboard/showdashboard", [UserDashboardController::class, 'showDashboard']);
+
 SimpleRouter::get("homepage/showhome", [HomePageController::class, 'showHome']);
+
 SimpleRouter::get("usermanagement/list", [UserManagmentController::class, 'list']);
 SimpleRouter::post("usermanagement/changeStatus", [UserManagmentController::class, 'changeStatus']);
+SimpleRouter::post("usermanagement/changeRole", [UserManagmentController::class, 'changeRole']);
+
 SimpleRouter::get("upload/showuploadform", [UploadController::class, 'showuploadform']);
 SimpleRouter::post("upload/uploadfileuser", [UploadController::class, 'uploadFileUser']);
 SimpleRouter::get("upload/showUploadGuest", [UploadController::class, 'showuploadguest']);
