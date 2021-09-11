@@ -7,7 +7,8 @@
 
 </head>
 <body>
-<div class="container">
+<div class="container" style=" margin-top: 55px;">
+
 	<div class="row">
 		<div class="col-12">
 			<table class="table table-responsive">
@@ -16,6 +17,7 @@
 					<th>نام کاربری</th>
 					<th>وضعیت کاربر</th>
 					<th>اعتبار کاربر</th>
+					<th> نقش</th>
 				</tr>
 				<?php
 				for ($i = 0; $i < count($users); $i++) {
@@ -31,8 +33,22 @@
 							</form>
 						</td>
 						<td> <?php echo $users[$i]['credit'] ?> ریال</td>
+						<td><?php echo $users[$i]['role'] != '' ? $users[$i]['role'] : 'کاربر معمولی'; ?>
+							<form action="/usermanagement/changeRole" method="post">
+								<input type="hidden" name="id" value="<?php echo $users[$i]['id'] ?>">
+								<select class="form-control" name="role" >
+									<option value="admin">ادمین</option>
+									<option value="approval">تایید کننده</option>
+									<option value="normal">تایید کننده</option>
+								</select>
+								<input class="btn btn-warning" type="submit" value="تغییر">
+
+							</form>
+						</td>
 					</tr>
 				<?php } ?>
+
+
 			</table>
 		</div>
 	</div>

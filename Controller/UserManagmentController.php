@@ -16,4 +16,13 @@ class UserManagmentController
 		$status->changeUserStatus($_POST['id']);
 		header("Location: /usermanagement/list");
 	}
+
+	public function changeRole()
+	{
+		$role = new User();
+		$role->changeUserRole($_POST['id'],$_POST['role']);
+
+		//header("Location: /usermanagement/list");
+	}
+
 }

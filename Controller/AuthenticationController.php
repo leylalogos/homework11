@@ -42,7 +42,7 @@ class AuthenticationController
 			header("Location: /homepage/showhome");
 
 		} else {
-
+			header("Location: /authentication/login");
 		}
 	}
 }

@@ -18,7 +18,7 @@ class User
 	public function getUsers()
 	{
 		$connection = ConnectToDatabase();
-		$sql = "SELECT * FROM useres";
+		$sql = "SELECT * FROM useres ";
 		$result = mysqli_query($connection, $sql);
 		$row = $result->fetch_all(MYSQLI_ASSOC);
 		return $row;
@@ -29,5 +29,13 @@ class User
 		$connection = ConnectToDatabase();
 		$sql = "UPDATE useres set is_active=!is_active where id=$id";
 		$result = mysqli_query($connection, $sql);
+	}
+
+	public function changeUserRole($id, $role){
+		$connection = ConnectToDatabase();
+		$sql = "UPDATE useres set role='$role' where id=$id";
+		$result = mysqli_query($connection, $sql);
+
+
 	}
 }

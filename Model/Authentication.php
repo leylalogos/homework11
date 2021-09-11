@@ -18,7 +18,7 @@ class Authentication
 
 	function login($username, $password) : bool{
 		$connection = ConnectToDatabase();
-		$sql = "SELECT * From useres WHERE username ='$username'  ";
+		$sql = "SELECT * From useres WHERE username ='$username' and is_active=1";
 		$result = mysqli_query($connection,$sql);
 		 if($result->num_rows == 0){
 			 return false;
@@ -31,4 +31,5 @@ class Authentication
 		}
 		return false;
 	}
+
 }

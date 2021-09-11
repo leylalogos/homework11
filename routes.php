@@ -12,4 +12,5 @@ SimpleRouter::get("userdashboard/showdashboard", [UserDashboardController::class
 SimpleRouter::get("homepage/showhome", [HomePageController::class, 'showHome']);
 SimpleRouter::get("usermanagement/list", [UserManagmentController::class, 'list']);
 SimpleRouter::post("usermanagement/changeStatus", [UserManagmentController::class, 'changeStatus']);
+SimpleRouter::post("usermanagement/changeRole", [UserManagmentController::class, 'changeRole']);
 
