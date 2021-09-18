@@ -4,10 +4,11 @@ include_once "./Helper/ConnectToDatabase.php";
 class File
 {
 
-	public function getFiles($id)
+	// thia method returns files for a user
+	public function getAllFiles()
 	{
 		$connection = ConnectToDatabase();
-		$sql = "SELECT * FROM files where user_id=$id";
+		$sql = "SELECT * FROM files ";
 		$result = mysqli_query($connection, $sql);
 		$row = $result->fetch_all(MYSQLI_ASSOC);
 		return $row;
@@ -20,5 +21,19 @@ class File
 		$result = mysqli_query($connection, $sql);
 		$row = $result->fetch_assoc();
 		return $row;
+	}
+	//this method approve file in database by approval user .
+	public function approveFile($id)
+	{
+		$connection = ConnectToDatabase();
+		$sql = "UPDATE files SET is_approved=1 WHERE id=$id";
+		$result = mysqli_query($connection, $sql);
+	}
+	//this method delete file in database by approval user .
+	public function deleteFile($id)
+	{
+		$connection = ConnectToDatabase();
+		$sql = "DELETE FROM files WHERE id=$id";
+		$result = mysqli_query($connection, $sql);
 	}
 }

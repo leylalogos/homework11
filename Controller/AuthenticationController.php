@@ -34,7 +34,6 @@ class AuthenticationController
 		$user = new Authentication();
 		$user->createUser($_POST['username'], $_POST['mobile'], $_POST['email'], $_POST['password']);
 		header("Location: /authentication/login");
-
 	}
 
 	public function showLoginForm()
@@ -55,7 +54,6 @@ class AuthenticationController
 		$login = new Authentication();
 		if ($login->login($_POST['username'], $_POST['password'])) {
 			header("Location: /homepage/showhome");
-
 		} else {
 			header("Location: /authentication/login");
 		}

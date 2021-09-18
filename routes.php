@@ -1,10 +1,13 @@
 <?php
+
 use Pecee\SimpleRouter\SimpleRouter;
+
 include "./Controller/UserDashboardController.php";
 include "./Controller/UserManagmentController.php";
 require_once "./Controller/AuthenticationController.php";
 include "./Controller/HomePageController.php";
 include_once "./Controller/UploadController.php";
+include_once "./Controller/FileApprovalController.php";
 SimpleRouter::get("authentication/register/", [AuthenticationController::class, 'register']);
 SimpleRouter::post("authentication/register", [AuthenticationController::class, 'addUser']);
 SimpleRouter::get("authentication/login", [AuthenticationController::class, 'showLoginForm']);
@@ -23,4 +26,8 @@ SimpleRouter::get("upload/showuploadform", [UploadController::class, 'showupload
 SimpleRouter::post("upload/uploadfileuser", [UploadController::class, 'uploadFileUser']);
 SimpleRouter::get("upload/showUploadGuest", [UploadController::class, 'showuploadguest']);
 SimpleRouter::post("upload/uploadfilguest", [UploadController::class, 'uploadfileguest']);
+SimpleRouter::get("approve/showfiles", [FileApprovalController::class, 'showfiles']);
+SimpleRouter::post("approve/approvefile", [FileApprovalController::class, 'approveFile']);
+SimpleRouter::post("delete/deletefile", [FileApprovalController::class, 'deleteFile']);
+
 

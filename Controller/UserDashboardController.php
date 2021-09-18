@@ -17,6 +17,4 @@ class UserDashboardController
 		$userFiles = $file->getUserFilesInformation($_SESSION['user_id']);
 		include "./View/UserDashboard.php";
 	}
-
-
 }
