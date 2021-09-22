@@ -3,6 +3,16 @@ include_once "./Helper/ConnectToDatabase.php";
 
 class File
 {
+	//this method show files that belong to user
+	public function getUserFiles($id)
+	{
+		$connection = ConnectToDatabase();
+		$sql = "SELECT * FROM files Where user_id=$id";
+		$result = mysqli_query($connection, $sql);
+		$row = $result->fetch_all(MYSQLI_ASSOC);
+		return $row;
+	}
+
 	//this method insert files into database
 	public function create($name, $size, $extention, $user_id)
 	{

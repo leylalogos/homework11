@@ -4,15 +4,15 @@
     <meta charset="utf-8">
     <title>صفحه تایید یا حذف فایل</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" />
-
+    <link rel="stylesheet" href="/Assets/style.css">
 </head>
 
 <body>
-
+    <a class="btna" href="/homepage/showhome">بازگشت به صفحه اصلی</a>
     <div class="container" style=" margin-top: 55px;">
         <div class="row">
             <div class="col-12">
-                <table class="table table-responsive">
+                <table class="table table-responsive table-bordered">
                     <tr>
                         <th>شناسه</th>
                         <th>نام فایل</th>

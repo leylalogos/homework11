@@ -9,6 +9,8 @@ include "./Controller/HomePageController.php";
 include_once "./Controller/UploadController.php";
 include_once "./Controller/FileApprovalController.php";
 include_once "./Controller/SettingController.php";
+include_once "./Controller/FileDetailController.php";
+
 SimpleRouter::get("authentication/register/", [AuthenticationController::class, 'register']);
 SimpleRouter::post("authentication/register", [AuthenticationController::class, 'addUser']);
 SimpleRouter::get("authentication/login", [AuthenticationController::class, 'showLoginForm']);
@@ -36,3 +38,4 @@ SimpleRouter::get("setting/showsetting", [SettingController::class, 'showSetting
 SimpleRouter::post("setting/setsetting", [SettingController::class, 'setSetting']);
 SimpleRouter::post("setting/updateSettings", [SettingController::class, 'updateSettings']);
 
+SimpleRouter::get("filedetail/showdetails", [FileDetailController::class, 'showDetails']);
