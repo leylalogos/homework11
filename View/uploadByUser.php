@@ -1,4 +1,5 @@
 <html dir="rtl">
+
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="/Assets/style.css">
@@ -9,14 +10,22 @@
 
 <body>
 
-<form action="upload/showuploadform" enctype="multipart/form-data">
-	<div class="file">
-		<lable><h4>فایل خود را آپلود کنید</h4></lable>
-		<input type="file" name="file_user" class="form-control form-control-lg" style="margin-top: 22px">
-		<input class="btn btn-success" type="submit" name="btn-file" value="بارگذاری فایل" style="margin-top: 47px">
-	</div>
-</form>
-<a  class ="btna" href="/homepage/showhome">بازگشت به صفحه اصلی</a>
+	<form action="/upload/uploadfileuser" enctype="multipart/form-data" method="post">
+		<div class="file">
+			<lable>
+				<h4>فایل خود را آپلود کنید</h4>
+			</lable>
+			<input type="file" name="file_user" class="form-control form-control-lg" style="margin-top: 22px">
+			<input class="btn btn-success" type="submit" name="btn-file" value="بارگذاری فایل" style="margin-top: 47px">
+		</div>
+	</form>
+	<?php if (isset($_SESSION['error'])) { ?>
+		<span style="color:red">
+			<?php echo $_SESSION['error'] ?>
+		</span>
+	<?php } ?>
+	<a class="btna" href="/homepage/showhome">بازگشت به صفحه اصلی</a>
 
 </body>
+
 </html>

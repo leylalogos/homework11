@@ -22,11 +22,11 @@
 				<?php echo $userData['credit'] ?><br>
 			</div>
 			<div>
-				تعداد دانلود:
+				تعداد دانلودها:
 				<?php echo $userFiles['download_sum'] ?><br>
 			</div>
 			<div>
-				حجم فایل:
+				حجم فایل ها:
 				<?php echo $userFiles['size_sum'] ?><br>
 			</div
 		</div>

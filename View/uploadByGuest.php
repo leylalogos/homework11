@@ -7,7 +7,7 @@
 </head>
 <body>
 <div>
-	<form action="upload/showUploadGuest" enctype="multipart/form-data">
+	<form action="upload/uploadfilguest" enctype="multipart/form-data" method="post">
 
 		<div class="file">
 			<lable><h4>فایل خود را آپلود کنید</h4></lable>

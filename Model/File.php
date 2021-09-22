@@ -3,7 +3,14 @@ include_once "./Helper/ConnectToDatabase.php";
 
 class File
 {
-
+	//this method insert files into database
+	public function create($name, $size, $extention, $user_id)
+	{
+		$connection = ConnectToDatabase();
+		$sql = "INSERT INTO files (name, size, extention, user_id,download_count,is_approved) VALUES ('$name', '$size', '$extention',$user_id, 0,0)";
+		var_dump($sql);
+		$result = mysqli_query($connection, $sql);
+	}
 	// thia method returns files for a user
 	public function getAllFiles()
 	{

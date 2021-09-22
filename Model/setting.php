@@ -23,6 +23,7 @@ class Setting
         $row = $result->fetch_assoc();
         return $row;
     }
+
     public function updateSettings($extention,$maxupload,$keepingTime)
     {
         $connection = ConnectToDatabase();
