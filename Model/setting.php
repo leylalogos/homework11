@@ -23,10 +23,10 @@ class Setting
         $row = $result->fetch_assoc();
         return $row;
     }
-    public function updateSettings()
+    public function updateSettings($extention,$maxupload,$keepingTime)
     {
         $connection = ConnectToDatabase();
-        $sql = "UPDATE setting SET extention='$extention',maxupload='$maxupload',keepingTime='$keepingTime";
+        $sql = "UPDATE setting SET extention='$extention',maxupload='$maxupload',keepingTime='$keepingTime'";
         $result = mysqli_query($connection, $sql);
     }
 }

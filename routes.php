@@ -33,3 +33,5 @@ SimpleRouter::post("delete/deletefile", [FileApprovalController::class, 'deleteF
 
 SimpleRouter::get("setting/showsetting", [SettingController::class, 'showSetting']);
 SimpleRouter::post("setting/setsetting", [SettingController::class, 'setSetting']);
+SimpleRouter::post("setting/updateSettings", [SettingController::class, 'updateSettings']);
+

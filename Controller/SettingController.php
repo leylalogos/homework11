@@ -27,6 +27,7 @@ class SettingController
     public function updateSettings()
     {
         $update = new setting();
-        $update->updateSettings();
+        $update->updateSettings($_POST['extention'], $_POST['maxupload'], $_POST['keepingtime']);
+        header("Location: /setting/showsetting");
     }
 }
